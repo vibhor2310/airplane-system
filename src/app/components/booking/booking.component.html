@@ -1,0 +1,46 @@
+ <div class="container">
+<div class="card">
+    <div class="card-header">
+      Booking Details:
+      <div class="alert alert-danger" *ngIf="msg">
+        {{ msg }}
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="mt-4">
+        <label>Name :</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="name">
+          </div>
+          <span *ngIf="!name">Name is required</span>
+        </div>
+        <label>Contact :</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="contact">
+          </div>
+          <span *ngIf="!contact">Contact is required</span>
+        </div>
+        <label>Date of Journey :</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="date" class="form-control" [(ngModel)]="dateOfJourney">
+          </div>
+          <span *ngIf="!dateOfJourney">Date is required</span>
+        </div>
+        <label>Number of Passengers :</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="number" class="form-control" [(ngModel)]="numberOfPassengers">
+          </div>
+          <span *ngIf="!numberOfPassengers">Passenger count is required</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+</div>
+  

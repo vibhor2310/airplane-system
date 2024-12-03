@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+        Flight-Information
+        </div>
+      <div class="card-body">
+        <div class="row font-weight-bold">
+          <div class="col">Flight Number</div>
+          <div class="col">Airline</div>
+          <div class="col">Source</div>
+          <div class="col">Destination</div>
+          <div class="col">Action</div>
+        </div>
+        <hr>
+        <div *ngFor="let flight of flights" class="row" >
+          <div class="col">{{ flight.flightNumber }}</div>
+          <div class="col">{{ flight.airline }}</div>
+          <div class="col">{{ flight.source }}</div>
+          <div class="col">{{ flight.destination }}</div>
+          <div class="col mb-3">
+            <button class="btn btn-primary" (click)="book(flight.flightNumber)" >Book</button>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  
